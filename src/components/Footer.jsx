@@ -34,7 +34,7 @@ const Footer = () => {
                 target='_blank'
                 style={{ color: "white" }}
                 rel='noopener noreferrer'
-                href='www.linkedin.com/in/dulce-herrera'
+                href='https://www.linkedin.com/in/dulce-herrera'
                 >
                 <FaLinkedin />
               </a>
