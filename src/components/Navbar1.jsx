@@ -67,7 +67,7 @@ const Navbar1 = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className='fork-btn'>
-              <Button className='fork-btn-inner' target='_blank' href='https://github.com/dulceherrera'>
+              <Button className='fork-btn-inner' target='_blank' href='https://github.com/dulceherrera/Portfolio.git'>
                 <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
                 <AiFillStar style={{ fontSize: "1.1em" }} />
               </Button>
