@@ -1,31 +1,35 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 import { ImPointRight } from 'react-icons/im'
+import { useTranslation } from 'react-i18next'
 
 const AboutCard = () => {
+
+  const { t } = useTranslation()
+
   return (
     <Card className='quote-card-view'>
       <Card.Body>
         <blockquote className='blockquote mb-0'>
           <p style={{ textAlign: "justify" }}>
-            Hi everyone, I am <span className='purple'>Dulce Herrera. </span>
-            I was born in <span className='purple'> Durango, Mexico</span>, but I have lived
-            in <span className='purple'>California, USA</span> for the last 5 years.
+            {t("about.about2")} <span className='purple'>Dulce Herrera. </span>
+            {t("about.born")} <span className='purple'> Durango, Mexico</span>,
+            {t("about.lived")} <span className='purple'>California, USA</span> {t("about.years")}.
             <br />
             I am currently studying at <span className='purple'> Academlo</span>
             <br />
             <br />
-            Besides coding, there are other activities that I love to do.
+            {t("about.besides")}
           </p>
           <ul>
             <li className='about-activity'>
-              <ImPointRight />Travelling ✈️
+              <ImPointRight />{t("about.travel")} ✈️
             </li>
             <li className='about-activity'>
-              <ImPointRight /> Going to Disneyland 🐭
+              <ImPointRight /> {t("about.disney")} 🐭
             </li>
             <li className='about-activity'>
-              <ImPointRight /> Dancing 💃🏻
+              <ImPointRight /> {t("about.dance")} 💃🏻
             </li>
           </ul>
         </blockquote>

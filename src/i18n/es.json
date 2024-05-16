@@ -1,0 +1,73 @@
+{
+  "navbar": {
+    "inicio": "Inicio",
+    "acerca": "Sobre mi",
+    "proyectos": "Proyectos",
+    "contacto": "Contacto",
+    "cv" : "CV"
+  },
+  "footer": {
+    "developed": "Desarrollado por Dulce Herrera"
+  },
+  "home": {
+    "titulo": "Hola",
+    "soy" : "SOY",
+    "intro" : "ME PRESENTO",
+    "body1" : "He pasado los últimos meses trabajando con",
+    "body2" : "construyendo todo desde cero hasta API's. Soy",
+    "chemical" : "Ingenieria Química",
+    "body3" : "y trabajar en este campo no ha sido fácil, pero me ha ayudado a ser más proactivo, eficiente y a entregar resultados de manera rápida y organizada incluso en un ambiente estresante, lo cual es muy importante en la industria tecnológica.",
+    "findme" : "ENCUÉNTRAME",
+    "social" : "No dudes en conectarte conmigo"
+    },
+  "about": {
+    "who": "Quién",
+    "iam" : "SOY",
+    "professional" : "Habilidades",
+    "skillset" : "Técnicas",
+    "about1" : "que he usado",
+    "tools" : "Herramientas",
+    "about2": "Hola a todos, soy",
+    "born" : "Soy originaria de",
+    "lived" : " pero he vivido en",
+    "years" : "por los últimos 5 años",
+    "besides" : "Además de programar, hay otras actividades que disfruto hacer.",
+    "travel" : "Viajar",
+    "disney" : "Ir a Disneylandia",
+    "dance" : "Bailar"
+  },
+  "projects": {
+    "my": "Mi",
+    "work" : "Trabajo",
+    "pro1" : "Aquí hay algunos proyectos que he realizado.",
+    "life": {
+      "description": "Una app full stack para prospectos de adoptantes de perros y/o gatos que deseen encontrar mascotas disponibles para adopción."
+    },
+    "weather": {
+      "description": "Puedes buscar el clima de tu ubicación actual o de cualquier parte del mundo."
+    },
+    "rick": {
+      "description": "Encontrarás todos los personajes de este programa filtrándolos por dimensión y cada personaje tiene información relevante."
+    },
+    "crud": {
+      "description": "Aplicación web que te permite interactuar con una API de usuarios a través de los métodos HTTP."
+    },
+    "pokedex": {
+      "description": "Este proyecto te permite ver la información de todos tus Pokémon favoritos. Puedes filtrar por tipo o directamente por el nombre del Pokémon."
+    },
+    "ecomm": {
+      "description": "Tienda virtual que contiene artículos a la venta con interacción fácil de usar."
+    }
+  },
+  "contact" : {
+    "campo": "Campo requerido",
+    "nombre": "Nombre",
+    "mensaje": "Mensaje",
+    "error": "Todos los campos son requeridos",
+    "enviado": "Email enviado exitosamente",
+    "enviar" : "Enviar"
+  },
+  "resume": {
+    "botton": "Descargar CV"
+  }
+}

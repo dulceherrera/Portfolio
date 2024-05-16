@@ -1,21 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import resumepdf from '../assets/Dulce-Herrera-Resume.pdf'
+import resumeEnglish from '../assets/Resume-english.pdf'
+import resumeSpanish from '../assets/Resume-spanish.pdf'
 import { Container, Row } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import { Document, Page, pdfjs } from 'react-pdf'
 import Particle from '../components/Particle'
 import { AiOutlineDownload } from 'react-icons/ai'
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { useTranslation } from 'react-i18next'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const ResumePage = () => {
 
   const [width, setwidth] = useState(1200)
+  const [isSpanish, setIsSpanish] = useState(false)
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
     setwidth(window.innerWidth)
   }, [])
 
+  const changeResume = () => {
+    if (i18n.language == "es"){
+      resumeSpanish
+    }else{
+      resumeEnglish
+    }
+  }
 
   return (
     <div>
@@ -29,7 +41,7 @@ const ResumePage = () => {
             href={resumepdf}
             >
               <AiOutlineDownload />
-              &nbsp;Download CV
+              &nbsp;{t("resume.botton")}
             </Button>
         </Row>
         <Row className='resume'>
@@ -45,7 +57,7 @@ const ResumePage = () => {
             href={resumepdf}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;{t("resume.botton")}
           </Button>
         </Row>
       </Container>

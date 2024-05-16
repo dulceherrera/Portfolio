@@ -5,8 +5,12 @@ import AboutCard from '../components/AboutPage/AboutCard'
 import TechStack from '../components/AboutPage/TechStack'
 import ToolStack from '../components/AboutPage/ToolStack'
 import womenLaptop from '../assets/women-w-laptop.svg'
+import { useTranslation } from 'react-i18next'
 
 const AboutPage = () => {
+
+  const { t } = useTranslation()
+
   return (
     <div>
       <Container fluid className='about-section'>
@@ -15,7 +19,7 @@ const AboutPage = () => {
           <Row style={{ justifyContent: "center", padding: "10px" }}>
             <Col md={7} style={{ paddingTop: "30px", paddingBottom: "50px", justifyContent: "center" }} >
               <h1 style={{ fontSize: "2em", paddingBottom: "20px" }}>
-                Who <strong className='purple'>I AM</strong> ?
+                {t("about.who")} <strong className='purple'>{t("about.iam")}</strong> ?
                 </h1>
                 <AboutCard />
             </Col>
@@ -24,11 +28,11 @@ const AboutPage = () => {
             </Col>
           </Row>
           <h1 className='project-heading'>
-            Professional <strong className='purple'>Skillset</strong>
+            {t("about.professional")} <strong className='purple'>{t("about.skillset")}</strong>
           </h1>
           <TechStack />
           <h1 className='project-heading'>
-            <strong className='purple'>Tools</strong> I use
+            <strong className='purple'>{t("about.tools")}</strong> {t("about.about1")}
           </h1>
           <ToolStack />
         </Container>

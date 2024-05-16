@@ -137,6 +137,12 @@ button:focus {
   width: 2.5rem !important;
 }
 
+.navbar_language_img{
+  width: 1em;
+  aspect-ratio: 1.5;
+  cursor: pointer;
+}
+
 .navbar-nav .nav-link{
   color: white !important;
   padding-right: 1rem !important;
@@ -436,6 +442,28 @@ button:focus {
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.560) !important;
   transform: scale(1.03) !important;
 }
+
+.contact-section{
+    position: relative !important;
+    background-image: var(--section-background-color) !important;
+    padding-top: 150px !important;
+    padding-bottom: 30px !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-contact{
+    width: 50%;
+  }
+
+  .form-span{
+    color: #B562D6;
+    font-size: 2em;
+  }
+
+  .form_label{
+    color: whitesmoke !important;
+  }
 
 .resume-section{
   position: relative !important;

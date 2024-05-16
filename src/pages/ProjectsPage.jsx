@@ -8,20 +8,25 @@ import userscrud from '../assets/Projects/users-crud.png'
 import rickandmorty from '../assets/Projects/rick-and-morty.png'
 import pokedex from '../assets/Projects/pokedex.png'
 import ecommerce from '../assets/Projects/e-commerce.png'
+import { useTranslation } from 'react-i18next'
+
 
 const ProjectsPage = () => {
+
+  const { t } = useTranslation()
+
   return (
     <Container fluid className='project-section'>
       <Particle />
       <Container>
-        <h1 className='project-heading'>My <strong className='purple'>Work</strong></h1>
-        <p style={{ color: "white" }}>Here are some projects I've worked on.</p>
+        <h1 className='project-heading'>{t("projects.my")} <strong className='purple'>{t("projects.work")}</strong></h1>
+        <p style={{ color: "white" }}>{t("projects.pro1")}</p>
         <Row style={{ paddingBottom: "10px", justifyContent: "center" }}>
           <Col md={4} className='project-card'>
             <ProjectCard
               imgPath={lifeisapawty}
               title="Life is a Pawty"
-              description="A full stack web application for prospective dog and/or cat adopters who want to find pets available for adoption."
+              description= {t("projects.life.description")}
               ghLink="https://github.com/dulceherrera/life-is-a-pawty.git"
               demoLink="https://life-is-a-pawty.dulceherrera.com/"
              />
@@ -30,7 +35,7 @@ const ProjectsPage = () => {
             <ProjectCard
               imgPath={weather}
               title="Weather App"
-              description="You can search for the weather of your current location or anywhere in the world."
+              description={t("projects.weather.description")}
               ghLink="https://github.com/dulceherrera/Weather-App.git"
               demoLink="https://weatherappdulceherrera.netlify.app/"
               />
@@ -39,7 +44,7 @@ const ProjectsPage = () => {
             <ProjectCard
               imgPath={rickandmorty}
               title="Rick and Morty"
-              description="Here you will find all the characters in this program filtering them by dimension and each character has relevant information."
+              description={t("projects.rick.description")}
               ghLink="https://github.com/dulceherrera/Rick-and-Morty.git"
               demoLink="https://rick-and-morty-dulceherrera.netlify.app/"
               />
@@ -48,7 +53,7 @@ const ProjectsPage = () => {
             <ProjectCard
               imgPath={userscrud}
               title="CRUD Users"
-              description="Web app that allows you to interact with a user API through all http methods."
+              description={t("projects.crud.description")}
               ghLink="https://github.com/dulceherrera/CRUD-Users.git"
               demoLink="https://crudusers-dulceherrera.netlify.app/"
               />
@@ -57,7 +62,7 @@ const ProjectsPage = () => {
             <ProjectCard
               imgPath={pokedex}
               title="Pokedex"
-              description="This project allows you to see the information of all your favorite Pokemon. You can filter by type or directly by the name of the Pokemon."
+              description={t("projects.pokedex.description")}
               ghLink="https://github.com/dulceherrera/Pokedex.git"
               demoLink="https://pokedex-dulceherrera.netlify.app/"
               />
@@ -66,7 +71,7 @@ const ProjectsPage = () => {
             <ProjectCard
               imgPath={ecommerce}
               title="e-commerce"
-              description="Virtual store containing items for sale with user-friendly interaction."
+              description={t("projects.ecomm.description")}
               ghLink="https://github.com/dulceherrera/e-commerce.git"
               demoLink="https://e-commerce-dulceherrera.netlify.app/"
               />

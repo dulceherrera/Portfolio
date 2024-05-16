@@ -4,8 +4,12 @@ import Particle from '../components/Particle'
 import Type from '../components/HomePage/Type'
 import Home2 from '../components/HomePage/Home2'
 import developerLogo from '../assets/developer.png'
+import { useTranslation } from 'react-i18next'
 
 const HomePage = () => {
+
+  const { t } = useTranslation()
+
   return (
     <section>
       <Container fluid className='home-section' id='home'>
@@ -14,13 +18,13 @@ const HomePage = () => {
           <Row>
             <Col md={7} className='home-header'>
               <h1 style={{ paddingBottom: 15 }} className='heading'>
-                Hi There! {" "}
+                {t("home.titulo")}! {" "}
                 <span className='wave' role="img" aria-labelledby='wave'>
                   👋🏻
                 </span>
               </h1>
               <h1 className='heading-name'>
-                I'M
+                {t("home.soy")}
                 <strong className='main-name'> DULCE HERRERA</strong>
               </h1>
               <div style={{ padding: 50, textAlign: "left" }}>

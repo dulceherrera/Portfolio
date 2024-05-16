@@ -7,12 +7,15 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 import { CgGitFork, CgFileDocument } from 'react-icons/cg'
-import { AiFillStar, AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from 'react-icons/ai'
+import { useTranslation } from 'react-i18next'
+import { AiFillStar, AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser, AiOutlineContacts } from 'react-icons/ai'
 
 
 const Navbar1 = () => {
   const [expand, setExpand] = useState(false)
   const [navColour, setNavColour] = useState(false)
+  const [isSpanish, setIsSpanish] = useState(false)
+  const { t, i18n } = useTranslation()
 
   const scrollHandler = () => {
     if (window.scrollY >= 20){
@@ -22,7 +25,17 @@ const Navbar1 = () => {
     }
   }
 
+  const handleLanguage = () => {
+    if(i18n.language == "en") {
+      i18n.changeLanguage("es")
+    }else{
+      i18n.changeLanguage("en")
+    }
+    setIsSpanish(!isSpanish)
+  }
+
   window.addEventListener("scroll", scrollHandler)
+
   return (
     <Navbar
     expanded={expand}
@@ -33,6 +46,14 @@ const Navbar1 = () => {
       <Container>
         <Navbar.Brand href='/' className='d-flex'>
           <img className='img-fluid logo' alt='brand' src={mylogo} />
+        </Navbar.Brand>
+        <Navbar.Brand className='d-flex' onClick={handleLanguage}>
+          {
+            isSpanish ?
+            <img className='navbar_language_img'src='./english.png' alt='english' />
+            :
+            <img className='navbar_language_img' src='./spanish.png' alt='spanish' />
+          }
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav'
         onClick={() => {
@@ -47,23 +68,28 @@ const Navbar1 = () => {
           <Nav className='ms-auto' defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as = {Link} to='/' onClick={() => setExpand(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> {t("navbar.inicio")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link as = {Link} to='/about' onClick={() => setExpand(false)}>
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> {t("navbar.acerca")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link as = {Link} to='/projects' onClick={() => setExpand(false)}>
                 <AiOutlineFundProjectionScreen style={{ marginBottom: "2px"}} />{" "}
-                Projects
+                {t("navbar.proyectos")}
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as = {Link} to='/contact' onClick={() => setExpand(false)}>
+                <AiOutlineContacts style={{ marginBottom: "2px" }} /> {t("navbar.contacto")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link as={Link} to='/resume' onClick={() => setExpand(false)}>
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} /> {t("navbar.cv")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className='fork-btn'>

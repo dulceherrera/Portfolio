@@ -1,0 +1,73 @@
+{
+  "navbar" : {
+    "inicio": "Home",
+    "acerca" : "About",
+    "proyectos" : "Projects",
+    "contacto" : "Contact",
+    "cv" : "Resume"
+  },
+  "footer" : {
+    "developed" : "Developed by Dulce Herrera"
+  },
+  "home" : {
+    "titulo" : "Hi There",
+    "soy": "I'M",
+    "intro" : "LET ME INTRODUCE MYSELF",
+    "body1" : "I've spent the last months working with",
+    "body2": "building everything from scratch to APIs. I am a",
+    "chemical" : "Chemical Engineer",
+    "body3" : "and working on this field has not been easy, but it has helped me to be more proactive, efficent, and to deliver results quickly and organized even in a stressfull environment, which is very important in the tech industry.",
+    "findme" : "FIND ME ON",
+    "social" : "Feel free to connect with me"
+  },
+  "about" : {
+    "who" : "Who",
+    "iam" : "I AM",
+    "professional" : "Professional",
+    "skillset" : "skillset",
+    "tools" : "Tools",
+    "about1" : "I use",
+    "about2" : "Hi everyone, I am",
+    "born" : "I was born in",
+    "lived" : " but I have lived",
+    "years" : "for the last 5 years",
+    "besides" : "Besides coding, there are other activities that I love to do.",
+    "travel" : "Travelling",
+    "disney" : "Going to Disneyland",
+    "dance" : "Dancing"
+  },
+  "projects" : {
+    "my" : "My",
+    "work" : "Work",
+    "pro1" : "Here are some projects I've worked on.",
+    "life" : {
+      "description" : "A full stack web application for prospective dog and/or cat adopters who want to find pets available for adoption."
+    },
+    "weather" : {
+      "description" : "You can search for the weather of your current location or anywhere in the world."
+    },
+    "rick" : {
+      "description" : "Here you will find all the characters in this program filtering them by dimension and each character has relevant information."
+    },
+    "crud" : {
+      "description" : "Web app that allows you to interact with a user API through all http methods."
+    },
+    "pokedex" : {
+      "description" : "This project allows you to see the information of all your favorite Pokemon. You can filter by type or directly by the name of the Pokemon."
+    },
+    "ecomm" : {
+      "description" : "Virtual store containing items for sale with user-friendly interaction."
+    }
+  },
+  "contact" : {
+    "campo" : "Required field",
+    "nombre": "Name",
+    "mensaje": "Message",
+    "error" : "All fields are required",
+    "enviado" : "Email successfully sent",
+    "enviar" : "Submit"
+  },
+  "resume" : {
+    "botton" : "Download CV"
+  }
+}

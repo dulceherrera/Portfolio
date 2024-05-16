@@ -4,21 +4,23 @@ import Tilt from "react-parallax-tilt"
 import { AiFillGithub, AiFillInstagram } from 'react-icons/ai'
 import { FaLinkedinIn } from 'react-icons/fa'
 import myAvatar from '../../assets/avatar.png'
+import { useTranslation } from 'react-i18next'
 
 const Home2 = () => {
+
+  const { t } = useTranslation()
+
   return (
     <Container fluid className='home-about-section' id='about-1'>
       <Container>
         <Row>
           <Col md={8} className='home-about-description'>
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className='blue'>INTRODUCE</span> MYSELF
+              {t("home.intro")}
             </h1>
             <p className='home-about-body'>
-              I've spent the last months working with <span className='purple'>HTML, CSS, Javascript,</span> building everything
-              from scratch to APIs. I am a <span className='purple'>Chemical Engineer</span>, and working on this field has not been
-              easy, but it has helped me to be more proactive, efficent, and to deliver results quickly
-              and organized even in a stressfull environment, which is very important in the tech industry.
+              {t("home.body1")} <span className='purple'>HTML, CSS, Javascript,</span> {t("home.body2")} <span className='purple'>{t("home.chemical")}</span>,
+              {t("home.body3")}
             </p>
           </Col>
           <Col md={4} className='myAvatar'>
@@ -29,9 +31,9 @@ const Home2 = () => {
         </Row>
         <Row>
           <Col md={12} className='home-about-social'>
-            <h1>FIND ME ON</h1>
+            <h1>{t("home.findme")}</h1>
             <p>
-              Feel free to <span className='blue'>connect </span> with me
+              {t("home.social")}
             </p>
             <ul className='home-about-social-links'>
               <li className='social-icons'>
