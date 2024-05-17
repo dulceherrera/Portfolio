@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { SiVisualstudiocode, SiSlack, SiMacos, SiVercel } from 'react-icons/si'
+import { SiVisualstudiocode, SiSlack, SiMacos, SiVercel, SiPostman } from 'react-icons/si'
 
 const ToolStack = () => {
   return (
@@ -16,6 +16,9 @@ const ToolStack = () => {
       </Col>
       <Col xs={4} md={2} className='tech-icons'>
         <SiVercel />
+      </Col>
+      <Col xs={4} md={2} className='tech-icons'>
+        <SiPostman />
       </Col>
     </Row>
   )
