@@ -2,7 +2,6 @@ import React from 'react'
 import { Col, Row, Container } from "react-bootstrap"
 import Particle from '../components/Particle'
 import ProjectCard from '../components/ProjectsPage/ProjectCard'
-import lifeisapawty from "../assets/Projects/life-is-a-pawty.png"
 import weather from '../assets/Projects/weather-app.png'
 import userscrud from '../assets/Projects/users-crud.png'
 import rickandmorty from '../assets/Projects/rick-and-morty.png'
@@ -22,15 +21,6 @@ const ProjectsPage = () => {
         <h1 className='project-heading'>{t("projects.my")} <strong className='purple'>{t("projects.work")}</strong></h1>
         <p style={{ color: "white" }}>{t("projects.pro1")}</p>
         <Row style={{ paddingBottom: "10px", justifyContent: "center" }}>
-          <Col md={4} className='project-card'>
-            <ProjectCard
-              imgPath={lifeisapawty}
-              title="Life is a Pawty"
-              description= {t("projects.life.description")}
-              ghLink="https://github.com/dulceherrera/life-is-a-pawty.git"
-              demoLink="https://life-is-a-pawty.dulceherrera.com/"
-             />
-          </Col>
           <Col md={4} className='project-card'>
             <ProjectCard
               imgPath={weather}
